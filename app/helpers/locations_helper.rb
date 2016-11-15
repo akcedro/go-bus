@@ -10,8 +10,8 @@ module LocationsHelper
     # Maximum Distance in degrees
     max_distance = 0.01 # 0.01 deg is about 0.5 miles
 
-    difference_latitudes = user.lat - bus_lat.to_f
-    difference_longitudes = user.long - bus_long.to_f
+    difference_latitudes = user_lat - bus_lat.to_f
+    difference_longitudes = user_long - bus_long.to_f
     distance = Math.sqrt(difference_latitudes ** 2 + difference_longitudes ** 2)
     distance <= max_distance
   end
